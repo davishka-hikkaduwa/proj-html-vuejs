@@ -27,7 +27,7 @@
         name: 'HeaderComponent',
         data() {
             return {
-                items: ['Home', 'About', 'Services', 'Work', 'Articles']
+                items: ['HOME', 'ABOUT', 'SERVICES', 'WORK', 'ARTICLES']
             }
         }
     }
@@ -56,10 +56,22 @@
 
         ul{
             list-style-type: none;
-            justify-content: space-between;     
+            justify-content: space-between;
+            li{
+                color: #6b6868;
+            }
+            li:hover{
+                color: #fed23f;
+            }     
         }
         .button-container{
-            justify-content: center;      
+            justify-content: center;
+            button{
+                background-color: #f9d03f;
+                color: #6b6868;
+                border: none;
+                padding: 10px 20px;
+            }      
         }
         ul, .button-container{
             display: flex;
