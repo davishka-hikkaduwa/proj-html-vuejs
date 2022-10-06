@@ -32,8 +32,6 @@ export default {
 
 <style scoped lang="scss">
     .services-card-container{
-        // display: flex;
-        // flex-direction: row;
         flex-wrap: nowrap;
 
         .services-card{

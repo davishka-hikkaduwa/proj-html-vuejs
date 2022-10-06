@@ -60,8 +60,6 @@ import ServicesCardComponent from '@/components/ServicesCardComponent.vue';
             background-repeat:no-repeat;
             background-size: cover;
             height: 400px;
-            border-top: 1px solid red;      // to make curved
-            border-bottom: 1px solid red;   // to make curved
         }
     }
 
