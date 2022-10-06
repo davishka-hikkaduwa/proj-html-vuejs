@@ -9,6 +9,9 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto. Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.</p>
         </div>
         <ServicesCardComponent class="card-container"/>
+        <div class="image-container">
+            <!-- <img src="@/assets/img/home-244125289.jpg" alt="img"> -->
+        </div>
     </div>
 </template>
 
@@ -49,8 +52,15 @@ import ServicesCardComponent from '@/components/ServicesCardComponent.vue';
             padding: 20px 100px;
             .row{
                 flex-wrap: nowrap;
-            }
-            
+            }    
+        }
+        .image-container{
+            background-image: url('@/assets/img/home-244125289.jpg');
+            background-repeat:no-repeat;
+            background-size: cover;
+            height: 400px;
+            border-top: 1px solid red;      // to make curved
+            border-bottom: 1px solid red;   // to make curved
         }
     }
 
