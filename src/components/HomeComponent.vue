@@ -7,7 +7,7 @@
                 <button class="black-btn">EXPLORE RECENT WORK</button>
             </div>
             <div class="col-6">
-                <button class="yellow-btn">GET A QUOTE TODAY</button>
+                <button class="gold-btn">GET A QUOTE TODAY</button>
             </div>
 
         </div>

@@ -7,20 +7,19 @@ button {
     padding: 10px 20px;
 }
 
-.gold-btn {
+.gold-btn,
+.black-btn:hover {
     background-color: #f9d03f;
     color: #6b6868;
 }
 
-.yellow-btn {
-    background-color: #fed23f;
-    color: #6b6868;
-}
-
-.black-btn {
+.black-btn,
+.gold-btn:hover {
     background-color: #31312f;
     color: #fff;
 }
+
+
 
 // ----- /BUTTONS -----
 

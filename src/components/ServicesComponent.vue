@@ -45,8 +45,14 @@ import ServicesCardComponent from '@/components/ServicesCardComponent.vue';
         .sandwich{
             display: block;
             position: absolute;
+            border: 2px solid #fff;
             left: 50%;
             transform: translateY(-50%) translateX(-50%);
+        }
+        .sandwich:hover{
+            background-color: #fff;
+            color: #1e1e1e;
+            border: 2px solid #1e1e1e;
         }
         .card-container{
             padding: 20px 60px;
