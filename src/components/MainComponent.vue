@@ -1,14 +1,19 @@
 <template>
     <main>
         <HomeComponent/>
+        <ServicesComponent/>
     </main>
 </template>
 
 <script>
 import HomeComponent from '@/components/HomeComponent.vue';
-    export default {
+import ServicesComponent from '@/components/ServicesComponent.vue';
+export default {
     name: "MainComponent",
-    components: { HomeComponent }
+    components: {
+        HomeComponent,
+        ServicesComponent
+    }
 }
 </script>
 
