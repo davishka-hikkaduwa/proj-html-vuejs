@@ -7,9 +7,7 @@
                     Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.
                 </p>
             </div>
-            <div class="card-container">
-                
-            </div>
+            <AboutCardComponent class="card-container"/>
         </div>
         <div class="feedback">
 
@@ -18,9 +16,11 @@
 </template>
 
 <script>
+import AboutCardComponent from "@/components/AboutCardComponent.vue";
     export default {
-        name: 'AboutComponent',
-    }
+    name: "AboutComponent",
+    components: { AboutCardComponent }
+}
 </script>
 
 <style scoped lang="scss">
@@ -30,13 +30,18 @@
         text-align: center;
         .core-values{
             .info-container{
-                padding: 80px 260px 20px 260px;
-                h5{
-                    padding-bottom: 20px;
-                }
+                padding: 40px 260px 0px;
+                
                 p{
-                    padding: 20px 40px;
+                    padding: 20px 40px 0px;
                 }
+            }
+            .card-container{
+                padding: 20px 200px;
+                margin-bottom: 80px;
+                .row{
+                    flex-wrap: nowrap;
+                } 
             }
         }
     }

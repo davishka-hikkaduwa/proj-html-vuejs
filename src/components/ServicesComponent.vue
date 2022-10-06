@@ -49,7 +49,8 @@ import ServicesCardComponent from '@/components/ServicesCardComponent.vue';
             transform: translateY(-50%) translateX(-50%);
         }
         .card-container{
-            padding: 20px 100px;
+            padding: 20px 60px;
+            margin-bottom: 80px;
             .row{
                 flex-wrap: nowrap;
             }    

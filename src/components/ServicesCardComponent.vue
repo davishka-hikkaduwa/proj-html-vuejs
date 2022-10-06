@@ -1,6 +1,6 @@
 <template>
-<div class="services-card-container">
-    <div class="col-3 services-card" v-for="(item, index) in items" :key="index">
+<div class="services-card-container row">
+    <div class="col services-card" v-for="(item, index) in items" :key="index">
         <div class="icon-container">
             <font-awesome-icon :icon="item.icon" class="icons"/>
         </div>
@@ -32,9 +32,9 @@ export default {
 
 <style scoped lang="scss">
     .services-card-container{
-        display: flex;
-        flex-direction: row;
-        
+        // display: flex;
+        // flex-direction: row;
+        flex-wrap: nowrap;
 
         .services-card{
             display: flex;
@@ -48,9 +48,11 @@ export default {
             .icon-container{
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                height: 50px;
+                width: 50px;
                 border: 1px solid #6b6868;
                 border-radius: 50%;
-                width:min-content;
                 padding: 15px;
                 margin: 10px 0px;
 
@@ -59,7 +61,6 @@ export default {
                     color: #6b6868;
                 }
             }
-            
         }   
     }
     
