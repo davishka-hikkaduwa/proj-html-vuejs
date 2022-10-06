@@ -24,8 +24,7 @@
     #home{
         background-image: url("../assets/img/home-slider-62528242.jpg");
         background-repeat:no-repeat;
-        background-position: fixed;
-        background-size: contain;
+        background-size: cover;
         height: 500px;
         display: flex;
         align-items: center;
