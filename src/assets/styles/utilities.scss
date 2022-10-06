@@ -1,0 +1,43 @@
+// ----- BUTTONS -----
+
+button {
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+}
+
+.gold-btn {
+    background-color: #f9d03f;
+    color: #6b6868;
+}
+
+.yellow-btn {
+    background-color: #fed23f;
+    color: #6b6868;
+}
+
+.black-btn {
+    background-color: #31312f;
+    color: #fff;
+}
+
+// ----- /BUTTONS -----
+
+// ----- TEXT-UNDERLINE -----
+.custom-underline {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.custom-underline::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 140px;
+    height: 2px;
+    background-color: #f9d03f;
+}
+
+// ----- /TEXT-UNDERLINE -----

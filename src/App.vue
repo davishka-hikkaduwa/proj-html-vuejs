@@ -28,6 +28,7 @@ body{
 }
 #app {
   @import '@/assets/styles/style.scss';
+  @import '@/assets/styles/utilities.scss';
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
