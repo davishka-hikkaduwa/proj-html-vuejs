@@ -15,7 +15,7 @@
             </div>
             <div class="col-2">
                 <div class="button-container">
-                    <button>GET A QUOTE</button>    <!-- BUTTON -->
+                    <button class="gold-btn">GET A QUOTE</button>    <!-- BUTTON -->
                 </div>
             </div> 
         </div>
@@ -65,13 +65,7 @@
             }     
         }
         .button-container{
-            justify-content: center;
-            button{
-                background-color: #f9d03f;
-                color: #6b6868;
-                border: none;
-                padding: 10px 20px;
-            }      
+            justify-content: center;      
         }
         ul, .button-container{
             display: flex;

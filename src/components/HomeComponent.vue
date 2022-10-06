@@ -1,13 +1,13 @@
 <template>
     <div id="home">
         <h1>BUILDING INSPIRING SPACES</h1>
-        <h4>We Build Inspiring Residential & Commercial Spaces</h4>
+        <h6>We Build Inspiring Residential & Commercial Spaces</h6>
         <div class="row">
             <div class="col-6">
-                <button>EXPLORE RECENT WORK</button>
+                <button class="black-btn">EXPLORE RECENT WORK</button>
             </div>
             <div class="col-6">
-                <button>GET A QUOTE TODAY</button>
+                <button class="yellow-btn">GET A QUOTE TODAY</button>
             </div>
 
         </div>
@@ -34,8 +34,9 @@
         h1{
             color: #fff;
         }
-        h4{
+        h6{
             color: #f9d03f;
+            margin-bottom: 26px;
         }
     }
 </style>
