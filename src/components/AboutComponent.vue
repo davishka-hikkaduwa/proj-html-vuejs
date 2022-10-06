@@ -13,8 +13,8 @@
             <div class="info-container">
                 <h5 class="custom-underline">Our Home Owners Say</h5>
                 <img src="@/assets/img/home-testimonial-113165296.jpg" alt="home-testimonial">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto.
-                    Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto.
+                    Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi."
                 </p>
                 <h6>HARRY SMITH - NEW HOME OWNER</h6>
             </div>
