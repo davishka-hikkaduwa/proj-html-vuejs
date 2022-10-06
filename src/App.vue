@@ -34,6 +34,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  // width: 100vw;
   
 }
 </style>
