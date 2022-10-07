@@ -56,6 +56,7 @@ export default {
                 
                 }
             }
+            
             p{
                 padding-top: 20px;
             }
@@ -72,6 +73,15 @@ export default {
                 width: 25px;
                 height: 2px;
                 background-color: #31312f;
+            }
+        }
+
+        .about-card:hover{
+            .icon-container{
+                background-color: #f9d03f!important;
+            }
+            h6{
+                color: #f9d03f;
             }
         }
 

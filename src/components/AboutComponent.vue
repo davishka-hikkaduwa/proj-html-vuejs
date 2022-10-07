@@ -10,7 +10,7 @@
         <div class="feedback">
             <div class="top-curved-space"></div>
             <div class="info-container">
-                <SectionTitleComponent :title="feeebackSectionTitle"/>
+                <SectionTitleComponent :title="feedbackSectionTitle"/>
                 <img src="@/assets/img/home-testimonial-113165296.jpg" alt="home-testimonial">
                 <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto.
                     Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi."
@@ -30,7 +30,7 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
     data(){
         return {
             coreValuesSectionTitle: 'Our Core Values',
-            feeebackSectionTitle: 'Our Home Owners Say'
+            feedbackSectionTitle: 'Our Home Owners Say'
         }
     },
     components: {
@@ -45,14 +45,6 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
         background-color: #f0ede6;
         padding: 30px 0;
         text-align: center;
-
-        // .info-container{
-        //     padding: 40px 260px 0px;
-                
-        //     p{
-        //         padding: 20px 40px 0px;
-        //     }
-        // }
 
         .core-values{
             .card-container{
