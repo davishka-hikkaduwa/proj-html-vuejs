@@ -1,7 +1,7 @@
 <template>
     <div id="work">
         <div class="info-container">
-            <h5 class="custom-underline">Explore Recent Work</h5>
+            <SectionTitleComponent :title="sectionTitle"/>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto.
                  Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.
             </p>
@@ -28,6 +28,19 @@
 </template>
 
 <script>
+import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
+
+export default {
+    name: 'WorkComponent',
+    data(){
+        return {
+            sectionTitle: 'Explore Recent Work'
+        }
+    },
+    components: {
+    SectionTitleComponent
+}
+}
 
 </script>
 
@@ -35,15 +48,7 @@
     #work{
         padding: 50px 0;
         text-align: center;
-        .info-container{
-            padding: 80px 260px 20px 260px;
-            h5{
-                padding-bottom: 20px;
-            }
-            p{
-                padding: 20px 40px;
-            }
-        }
+        
         .image-container{
             padding: 0 200px;
             .col-4{

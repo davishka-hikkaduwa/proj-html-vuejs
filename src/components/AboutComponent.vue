@@ -2,16 +2,14 @@
     <div id="about">
         <div class="core-values">
             <div class="info-container">
-                <h5 class="custom-underline">Our Core Values</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto.
-                    Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.
-                </p>
+                <SectionTitleComponent :title="coreValuesSectionTitle"/>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto. Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.</p>
             </div>
             <AboutCardComponent class="card-container"/>
         </div>
         <div class="feedback">
             <div class="info-container">
-                <h5 class="custom-underline">Our Home Owners Say</h5>
+                <SectionTitleComponent :title="feeebackSectionTitle"/>
                 <img src="@/assets/img/home-testimonial-113165296.jpg" alt="home-testimonial">
                 <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto.
                     Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi."
@@ -24,9 +22,19 @@
 
 <script>
 import AboutCardComponent from "@/components/AboutCardComponent.vue";
+import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
     export default {
     name: "AboutComponent",
-    components: { AboutCardComponent }
+    data(){
+        return {
+            coreValuesSectionTitle: 'Our Core Values',
+            feeebackSectionTitle: 'Our Home Owners Say'
+        }
+    },
+    components: {
+        AboutCardComponent, 
+        SectionTitleComponent
+    }
 }
 </script>
 
@@ -36,13 +44,13 @@ import AboutCardComponent from "@/components/AboutCardComponent.vue";
         padding: 30px 0;
         text-align: center;
 
-        .info-container{
-            padding: 40px 260px 0px;
+        // .info-container{
+        //     padding: 40px 260px 0px;
                 
-            p{
-                padding: 20px 40px 0px;
-            }
-        }
+        //     p{
+        //         padding: 20px 40px 0px;
+        //     }
+        // }
 
         .core-values{
             .card-container{

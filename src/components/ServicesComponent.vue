@@ -1,13 +1,18 @@
 <template>
     <div id="services">
-        <div class="title-container">
+        <div class="label-container">
             <h4>Do You Have A Construction Project We Can Help With?</h4>
         </div>
         <button class="sandwich black-btn">GET A FREE QUOTE</button>
         <div class="info-container">
-            <h5 class="custom-underline">Specialists in Modern Construction</h5>
+            <SectionTitleComponent :title="sectionTitle"/>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto. Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.</p>
         </div>
+        <!-- <div class="info-container">
+            <h5 class="custom-underline">Specialists in Modern Construction</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, architecto. Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.</p>
+        </div> -->
+        
         <ServicesCardComponent class="card-container"/>
         <div class="image-container">
             <!-- <img src="@/assets/img/home-244125289.jpg" alt="img"> -->
@@ -17,9 +22,18 @@
 
 <script>
 import ServicesCardComponent from '@/components/ServicesCardComponent.vue';
+import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
     export default {
     name: "ServicesComponent",
-    components: { ServicesCardComponent }
+    data(){
+        return {
+            sectionTitle: 'Specialists in Modern Construction'
+        }
+    },
+    components: {
+    ServicesCardComponent,
+    SectionTitleComponent
+},
 }
 
 </script>
@@ -28,20 +42,20 @@ import ServicesCardComponent from '@/components/ServicesCardComponent.vue';
     #services{
         text-align: center;
 
-        .title-container{
+        .label-container{
             padding: 50px 30px;
             background-color: #f9d03f;
             color: #1e1e1e;
         }
-        .info-container{
-            padding: 80px 350px;
-            h5{
-                padding-bottom: 20px;
-            }
-            p{
-                padding-top: 20px;
-            }
-        }
+        // .info-container{
+        //     padding: 80px 350px;
+        //     h5{
+        //         padding-bottom: 20px;
+        //     }
+        //     p{
+        //         padding-top: 20px;
+        //     }
+        // }
         .sandwich{
             display: block;
             position: absolute;
