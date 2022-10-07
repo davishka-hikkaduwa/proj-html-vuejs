@@ -1,10 +1,10 @@
 <template>
     <div class="about-card-container row">
-        <div class="col about-card" v-for="(item, index) in items" :key="index">
+        <div class="col about-card" v-for="(card, index) in cards" :key="index">
             <div class="icon-container">
-                <font-awesome-icon :icon="item.icon" class="icons"/>
+                <font-awesome-icon :icon="card.icon" class="icons"/>
             </div>
-            <h6 class="custom-underline-black"> {{ item.title }} </h6>
+            <h6 class="custom-underline-black"> {{ card.title }} </h6>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Recusandae, fugit. Sint corrupti tenetur vitae.
             </p>
@@ -18,7 +18,7 @@ export default {
     name: 'AboutCardComponent',
     data(){
         return {
-            items: [
+            cards: [
                 {title: 'Great Services', icon: 'fa-solid fa-house-chimney'},
                 {title: 'Highest Standards', icon: 'fa-solid fa-gear'},
                 {title: 'Professional Team', icon: 'fa-solid fa-users'},
