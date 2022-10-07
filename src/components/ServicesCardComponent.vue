@@ -1,13 +1,19 @@
 <template>
 <div class="services-card-container row">
-    <div class="col services-card" v-for="(card, index) in cards" :key="index" 
-        v-on:mouseenter="toggleCard(card)" v-on:mouseleave="toggleCard(card)">
-        <div :key="card.flipped" class="inner-card">
-            <div class="icon-container">
-                <font-awesome-icon :icon="card.front.icon" class="icons"/>
+    <div class="col services-card" v-for="(card, index) in cards" :key="index">
+        <div class="inner-card" @click="cardActual == 'start' ? (cardActual = 'flipped' ) : (cardActual = 'start' )" 
+        :class="{ flip: cardActual == 'flipped' }">
+            <div class="card-face face-front">
+                <div class="icon-container">
+                    <font-awesome-icon :icon="card.front.icon" class="icons"/>
+                </div>
+                <h4> {{ card.front.title }} </h4>
+                <p> {{ card.front.text }} </p>
             </div>
-            <h4> {{ card.flipped ? card.back.title : card.front.title }} </h4>
-            <p> {{ card.flipped ? card.back.text : card.front.text }} </p>
+            <div class="card-face face-back">
+                <h3> {{ card.back.title }} </h3>
+                <p> {{ card.back.text }} </p>
+            </div>
         </div>
     </div>
 </div>
@@ -16,17 +22,9 @@
 <script>
 export default {
     name: 'ServicesCardComponent',
-    props: {
-        flipped: Boolean,
-    },
     data(){
         return {
-            // cards: [
-            //     {title: 'Buildings', icon: 'fa-regular fa-building'},
-            //     {title: 'Renovate', icon: 'fa-solid fa-arrows-rotate'},
-            //     {title: 'Construct', icon: 'fa-solid fa-house-chimney'},
-            //     {title: 'Exclusive', icon: 'fa-solid fa-truck'}
-            // ]
+            cardActual: "start",
             cards: [
                 {
                     front: {
@@ -37,8 +35,7 @@ export default {
                     back: {
                         title: 'ARTFULLY CRAFTED',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fugit. Sint corrupti tenetur vitae.' 
-                    },
-                    flipped: false
+                    }
                 },
                 {
                     front: {
@@ -49,8 +46,7 @@ export default {
                     back: {
                         title: 'ARTFULLY CRAFTED',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fugit. Sint corrupti tenetur vitae.' 
-                    },
-                    flipped: false
+                    }
                 },
                 {
                     front: {
@@ -61,8 +57,7 @@ export default {
                     back: {
                         title: 'ARTFULLY CRAFTED',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fugit. Sint corrupti tenetur vitae.' 
-                    },
-                    flipped: false
+                    }
                 },
                 {
                     front: {
@@ -73,17 +68,12 @@ export default {
                     back: {
                         title: 'ARTFULLY CRAFTED',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fugit. Sint corrupti tenetur vitae.' 
-                    },
-                    flipped: false
+                    }
                 },
             ]
         }
     },
-    methods: {
-        toggleCard(card) {
-            card.flipped = !card.flipped;
-        },
-    }
+
 
 }
 
@@ -99,10 +89,30 @@ export default {
             margin: 0 5px;
             padding: 10px;
             border-radius: 5%;
-            background-color: #f0ede6;
+            // background-color: #f0ede6;
             align-items: center;
+            width: 200px;
+            height: 260px;
 
             .inner-card{
+                width: 100%;
+                height: 100%;
+                transition: transform 1s;
+                transform-style: preserve-3d;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .card-face{
+                position: absolute;
+                padding: 20px;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                backface-visibility: hidden;
+            }
+
+            .face-front{
                 // position: relative;
                 background-color: #f0ede6;
                 display: flex;
@@ -110,6 +120,15 @@ export default {
                 flex-direction: column;
                 align-items: center;
 
+            }
+
+            .face-back{
+                transform: rotateY(180deg);
+                background-color: yellow;
+            }
+
+            .flip{
+                transform: rotateY(180deg);
             }
 
             .icon-container{
@@ -132,7 +151,5 @@ export default {
             
         }   
     }
-    // .toggle{
-    //     display: none !important;
-    // }
+
 </style>
