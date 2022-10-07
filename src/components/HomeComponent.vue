@@ -9,7 +9,6 @@
             <div class="col-6">
                 <button class="gold-btn">GET A QUOTE TODAY</button>
             </div>
-
         </div>
     </div>
 </template>

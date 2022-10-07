@@ -36,20 +36,25 @@ button {
 
 // ----- /BUTTONS -----
 
-// // ----- TEXT-UNDERLINE -----
-// .custom-underline {
-//     padding-bottom: 20px;
-//     position: relative;
-// }
+// ----- CURVED SPACE DIV -----
+.top-curved-space,
+.bottom-curved-space {
+    position: absolute;
+    // z-index: 100;
+    height: 100px;
+    width: 100%;
+}
 
-// .custom-underline::before {
-//     content: '';
-//     position: absolute;
-//     bottom: 0;
-//     left: 40%;
-//     width: 140px;
-//     height: 2px;
-//     background-color: #f9d03f;
-// }
+.top-curved-space {
+    top: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
 
-// // ----- /TEXT-UNDERLINE -----
+.bottom-curved-space {
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+// ----- /CURVED SPACE DIV -----

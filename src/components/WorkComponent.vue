@@ -46,8 +46,12 @@ export default {
 
 <style scoped lang="scss">
     #work{
-        padding: 50px 0;
+        padding: 10px 0;
         text-align: center;
+
+        .info-container{
+            padding-top: 0;
+        }
         
         .image-container{
             padding: 0 200px;

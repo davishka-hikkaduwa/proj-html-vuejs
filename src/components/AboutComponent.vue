@@ -8,6 +8,7 @@
             <AboutCardComponent class="card-container"/>
         </div>
         <div class="feedback">
+            <div class="top-curved-space"></div>
             <div class="info-container">
                 <SectionTitleComponent :title="feeebackSectionTitle"/>
                 <img src="@/assets/img/home-testimonial-113165296.jpg" alt="home-testimonial">
@@ -16,6 +17,7 @@
                 </p>
                 <h6>HARRY SMITH - NEW HOME OWNER</h6>
             </div>
+            <div class="bottom-curved-space"></div>
         </div>
     </div>
 </template>
@@ -68,6 +70,13 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
             background-image: url('@/assets/img/home-parallax-144609983.jpg');
             background-repeat:no-repeat;
             background-size: cover;
+            position: relative;
+            height: 700px;
+
+            .top-curved-space,
+            .bottom-curved-space {
+                background-color: #f0ede6;
+            }
             
             .info-container{
                 img{
@@ -75,7 +84,7 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
                     border-radius: 50%;
                 }
                 h6{
-                    padding-top: 20px;
+                    padding-top: 10px;
                 }
             }
         }

@@ -28,8 +28,12 @@ export default {
 <style scoped lang="scss">
     #articles{
         background-color: #f0ede6;
-        padding: 30px 0;
+        padding: 10px 0;
         text-align: center;
+
+        .info-container{
+            padding-top: 0;
+        }
     }
 
 </style>
