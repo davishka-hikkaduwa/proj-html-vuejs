@@ -11,6 +11,13 @@
         <ServicesCardComponent class="card-container"/>
         <div class="image-container">
             <div class="top-curved-space"></div>
+            <div class="row card-container">
+                <div class="col card" v-for="(card, index) in cards" :key="index">
+                    <font-awesome-icon :icon="card.icon" class="icons"/>
+                    <h5> {{ card.number }} </h5>
+                    <p> {{ card.text }} </p>
+                </div>
+            </div>
             <div class="bottom-curved-space"></div>
         </div>
     </div>
@@ -23,7 +30,29 @@ import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
     name: "ServicesComponent",
     data(){
         return {
-            sectionTitle: 'Specialists in Modern Construction'
+            sectionTitle: 'Specialists in Modern Construction',
+            cards: [
+                {
+                    text: 'PLANNING APPLICATIONS', 
+                    icon: 'fa-solid fa-briefcase',
+                    number: 3534
+                },
+                {
+                    text: 'COMPLETED PROJECTS', 
+                    icon: 'fa-regular fa-building',
+                    number: 896
+                },
+                {
+                    text: 'TRAINED PROFESSIONALS', 
+                    icon: 'fa-solid fa-users',
+                    number: 172
+                },
+                {
+                    text: 'INTERNATIONAL OFFICES', 
+                    icon: 'fa-solid fa-globe',
+                    number: 19
+                },
+            ]
         }
     },
     components: {
@@ -70,10 +99,46 @@ import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
             background-size: cover;
             height: 600px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .top-curved-space,
             .bottom-curved-space {
                 background-color: #fff;
+            }
+
+            .card-container{
+                padding: 0;
+                margin: 0 200px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: transparent;
+
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: transparent;
+                    white-space: nowrap;
+                    .icons{
+                        color: #f9d03f;
+                        font-size: 60px;
+                        margin: 10px 0;
+                    }
+                    h5{
+                        color: #f9d03f;
+                        font-size: 50px;
+                    }
+                    p{
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+
             }
         }
     }
