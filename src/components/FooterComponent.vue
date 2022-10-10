@@ -10,18 +10,43 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus placeat blanditiis in consequatur, earum, corporis.</p>
                     <button class="gold-btn">LEARN MORE</button>
                 </div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col">
+                    <h6>LATEST TWEETS</h6>
+                    <TweetComponent v-for="(tweet, index) in tweets" :key="index" 
+                    :userName="tweet.userName" 
+                    :profileImage="tweet.profileImage" 
+                    :postTime="tweet.postTime"/>
+                </div>
+                <div class="col">
+                    <h6>CONTACT US TODAY</h6>
+
+                </div>
+                <div class="col">
+                    <h6>FIND US</h6>
+
+                </div>
             </div>
         </div>
     </footer>
 </template>
 
 <script>
+import TweetComponent from './TweetComponent.vue';
     export default {
-        name: 'FooterComponent',
-    }     
+    name: "FooterComponent",
+    data(){
+        return{
+            tweets: [
+                {
+                    userName: 'Theme Fusion',
+                    profileImage: '3a74ce3d0532b7773b174c45ca3bd05a_normal.png',
+                    postTime: '22'
+                }
+            ]
+        }
+    },
+    components: { TweetComponent }
+}     
 
 </script>
 
@@ -33,7 +58,7 @@
         }
         .container-fluid{
             padding: 50px 0;
-            background-color: #31312f;
+            background-color: #1e1e1e;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -49,6 +74,10 @@
                     // height: 200px;
                     
                     margin: 0 5px;
+                    h6{
+                        color: #f9d03f;
+                        font-weight: bold!important;
+                    }
                     
                 }
                 .col:first-child{
