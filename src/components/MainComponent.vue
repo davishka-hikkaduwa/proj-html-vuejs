@@ -19,13 +19,13 @@ import PartnersComponent from '@/components/PartnersComponent.vue';
 export default {
     name: "MainComponent",
     components: {
-    HomeComponent,
-    ServicesComponent,
-    WorkComponent,
-    AboutComponent,
-    ArticlesComponent,
-    PartnersComponent
-}
+        HomeComponent,
+        ServicesComponent,
+        WorkComponent,
+        AboutComponent,
+        ArticlesComponent,
+        PartnersComponent
+    }
 }
 </script>
 

@@ -75,7 +75,6 @@ export default {
             color: #fff;
             height: 300px;
             .container{
-                border: 1px solid #fff;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
