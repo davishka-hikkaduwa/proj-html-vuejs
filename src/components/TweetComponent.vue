@@ -17,9 +17,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-container">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                             Sit illum ut quasi ipsa error natus maxime dicta dolorum.
-                        </p>
+                        <p> {{ tweetContent }} </p>
                     </div>
                 </div>
                 <div class="row">
@@ -48,6 +46,7 @@ export default {
         profileImage: String,
         userName: String,
         postTime: Number,
+        tweetContent: String
     }
 }
 </script>

@@ -8,11 +8,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBuilding, faHeart, faShareFromSquare } from '@fortawesome/free-regular-svg-icons'
-import { faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe, faMagnifyingGlass, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding, faHeart, faShareFromSquare, faEnvelope, faClock } from '@fortawesome/free-regular-svg-icons'
+import { faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe, faMagnifyingGlass, faLink, faPhoneFlip, } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faBuilding, faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe, faMagnifyingGlass, faLink, faHeart, faShareFromSquare)
+library.add(faBuilding, faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe, faMagnifyingGlass, faLink, faHeart, faShareFromSquare, faEnvelope, faClock, faPhoneFlip)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)

@@ -16,14 +16,15 @@
                     </div>
                     <TweetComponent class="tweet-container" v-for="(tweet, index) in tweets" :key="index" 
                     :userName="tweet.userName" 
-                    :profileImage="tweet.profileImage" 
+                    :profileImage="tweet.profileImage"
+                    :tweetContent="tweet.tweetContent" 
                     :postTime="tweet.postTime"/>
                 </div>
                 <div class="col">
                     <div class="heading-container">
                         <h6>CONTACT US TODAY</h6>
                     </div>
-
+                    <ContactsComponent/>
                 </div>
                 <div class="col">
                     <div class="heading-container">
@@ -38,6 +39,7 @@
 
 <script>
 import TweetComponent from './TweetComponent.vue';
+import ContactsComponent from './ContactsComponent.vue';
     export default {
     name: "FooterComponent",
     data(){
@@ -46,12 +48,13 @@ import TweetComponent from './TweetComponent.vue';
                 {
                     userName: 'Theme Fusion',
                     profileImage: '3a74ce3d0532b7773b174c45ca3bd05a_normal.png',
-                    postTime: 22
+                    postTime: 22,
+                    tweetContent: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit illum ut quasi ipsa error natus maxime dicta dolorum.'
                 }
             ]
         }
     },
-    components: { TweetComponent }
+    components: { TweetComponent, ContactsComponent }
 }     
 
 </script>
