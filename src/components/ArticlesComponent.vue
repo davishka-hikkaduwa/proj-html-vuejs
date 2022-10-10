@@ -9,17 +9,13 @@
         <div class="articles-card-container row">
             <div class="col article-card" v-for="(card, index) in cards" :key="index">
                 <div class="image-container">
-                    <img src="@/assets/img/blog-post-134132600.jpg" alt="img-1">
+                    <img :src="`./assets/img/${card.imgUrl}`" :alt="card.title"/>
                 </div>
                 <div class="content-container">
                     <h5> {{ card.title }} </h5>
                     <p> {{ card.date }} </p>
-                    <div>
-
-
-                    </div>
-                    <p> {{ card.content }} </p>
-                    
+                    <div class="line"></div>
+                    <p> {{ card.content }} </p>                    
                 </div>
             </div>
         </div>
@@ -40,20 +36,20 @@ export default {
             sectionTitle: 'Latest News',
             cards: [
                 {
-                    title: 'Redeveloping',
-                    imgUrl: '#',
+                    title: "Redeveloping Florida's Remote Southern Coast",
+                    imgUrl: 'blog-post-134132600.jpg',
                     date: 'December 7th, 2015',
                     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut, cumque totam, fugiat aliquam tempora illum quae pariatur in at iure quia et dolore esse. Aliquam illum corrupti consequatur odio.'
                 },
                 {
-                    title: 'How We Manage',
-                    imgUrl: '#',
+                    title: "How We Manage Large Construction Projects",
+                    imgUrl: 'blog-post-92486644.jpg',
                     date: 'December 7th, 2015',
                     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut, cumque totam, fugiat aliquam tempora illum quae pariatur in at iure quia et dolore esse. Aliquam illum corrupti consequatur odio.'
                 },
                 {
-                    title: 'Future Proofing',
-                    imgUrl: '#',
+                    title: 'Future proofing a modern home',
+                    imgUrl: 'blog-post-332773904.jpg',
                     date: 'December 6th, 2015',
                     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aut, cumque totam, fugiat aliquam tempora illum quae pariatur in at iure quia et dolore esse. Aliquam illum corrupti consequatur odio.'
                 },
@@ -76,16 +72,15 @@ export default {
         }
         .articles-card-container{
             justify-content: center;
-            height: 400px;
             margin: 0px 150px;
             margin-bottom: 50px;
 
             .article-card{
-                border: 1px solid black;
                 margin: 0 10px;
                 padding: 0;
+                background-color: #fff;
+                height: 100%;
                 .image-container{
-                    height: 40%;
                     width: 100%;
                     img{
                         height: 100%;
@@ -93,13 +88,18 @@ export default {
                     }
                 }
                 .content-container{
-                    padding: 15px 10px;
+                    padding: 15px;
                     text-align: left;
+                    
+                    .line{
+                        border-top: 1px solid #6b6868;
+                        padding-bottom: 1rem;
+                    }
                 }
             }
         }
         .row:last-child{
-            margin: 50px 150px;
+            margin: 70px 150px;
             justify-content: center;
 
 
