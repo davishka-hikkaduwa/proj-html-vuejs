@@ -5,6 +5,7 @@
         <WorkComponent/>
         <AboutComponent/>
         <ArticlesComponent/>
+        <PartnersComponent/>
     </main>
 </template>
 
@@ -14,15 +15,17 @@ import ServicesComponent from '@/components/ServicesComponent.vue';
 import WorkComponent from '@/components/WorkComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
 import ArticlesComponent from '@/components/ArticlesComponent.vue';
+import PartnersComponent from '@/components/PartnersComponent.vue';
 export default {
     name: "MainComponent",
     components: {
-        HomeComponent,
-        ServicesComponent,
-        WorkComponent,
-        AboutComponent,
-        ArticlesComponent
-    }
+    HomeComponent,
+    ServicesComponent,
+    WorkComponent,
+    AboutComponent,
+    ArticlesComponent,
+    PartnersComponent
+}
 }
 </script>
 
