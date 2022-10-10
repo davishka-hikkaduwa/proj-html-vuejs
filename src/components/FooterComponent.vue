@@ -11,18 +11,24 @@
                     <button class="gold-btn">LEARN MORE</button>
                 </div>
                 <div class="col">
-                    <h6>LATEST TWEETS</h6>
-                    <TweetComponent v-for="(tweet, index) in tweets" :key="index" 
+                    <div class="heading-container">
+                        <h6>LATEST TWEETS</h6>
+                    </div>
+                    <TweetComponent class="tweet-container" v-for="(tweet, index) in tweets" :key="index" 
                     :userName="tweet.userName" 
                     :profileImage="tweet.profileImage" 
                     :postTime="tweet.postTime"/>
                 </div>
                 <div class="col">
-                    <h6>CONTACT US TODAY</h6>
+                    <div class="heading-container">
+                        <h6>CONTACT US TODAY</h6>
+                    </div>
 
                 </div>
                 <div class="col">
-                    <h6>FIND US</h6>
+                    <div class="heading-container">
+                        <h6>FIND US</h6>
+                    </div>
 
                 </div>
             </div>
@@ -40,7 +46,7 @@ import TweetComponent from './TweetComponent.vue';
                 {
                     userName: 'Theme Fusion',
                     profileImage: '3a74ce3d0532b7773b174c45ca3bd05a_normal.png',
-                    postTime: '22'
+                    postTime: 22
                 }
             ]
         }
@@ -69,14 +75,22 @@ import TweetComponent from './TweetComponent.vue';
                 height: 100%;
 
                 .col{
-                    border: 1px solid white;
+                    // border: 1px solid white;
                     height: 100%;
                     // height: 200px;
                     
                     margin: 0 5px;
-                    h6{
+                    .heading-container{
+                        margin-bottom: 20px;
+
+                        h6{
                         color: #f9d03f;
                         font-weight: bold!important;
+                    }
+                    }
+                    
+                    .tweet-container{
+                        // margin-top: 20px;
                     }
                     
                 }
