@@ -6,16 +6,27 @@
                  Repellendus, aut. Vitae perferendis quaerat rerum odit quibusdam voluptatibus excepturi.
             </p>
         </div>
-        <div class="row image-container">
-            <div class="col-4">
+        <div class="row card-container">
+            <div class="col-4 card" v-for="(card, index) in cards" :key="index">
+                <div class="inner-card">
+                    <div class="card-face face-front">
+                        Ciao
+                        <!-- <img :src="`@/assets/img/${card.front.url}.jpg`" :alt="card.front.alt"/> -->
+                    </div>
+                    <div class="card-face face-back">
+                        <CardBackIconsComponent class="row"/>
+                        <div class="row">
+                            <h5> {{ card.back.name }} </h5>
+                            <p> {{ card.back.type }} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
                 <img src="@/assets/img/project2-featured-15013609-800x800.jpg" alt="project-2-800x800">
-            </div>
-            <div class="col-4">
                 <img src="@/assets/img/project1-featured-294276386-800x800.jpg" alt="project-1-800x800">
-            </div>
-            <div class="col-4">
                 <img src="@/assets/img/project3-featured-189023420-800x800.jpg" alt="project-3-800x800">
-            </div>
+            -->
         </div>
         <div class="row link-container">
             <div class="col-4"></div>
@@ -29,16 +40,50 @@
 
 <script>
 import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
+import CardBackIconsComponent from '@/components/CardBackIconsComponent.vue';
 
 export default {
     name: 'WorkComponent',
     data(){
         return {
-            sectionTitle: 'Explore Recent Work'
+            sectionTitle: 'Explore Recent Work',
+            cards: [
+                {
+                    front: {
+                        url: 'project2-featured-15013609-800x800',
+                        alt: 'project-2-800x800'
+                    },
+                    back: {
+                        name: 'Florida Health Facility',
+                        type: 'Commercial' 
+                    }
+                },
+                {
+                    front: {
+                        url: 'project1-featured-294276386-800x800',
+                        alt: 'project-1-800x800'
+                    },
+                    back: {
+                        name: 'Florida Health Facility',
+                        type: 'Commercial' 
+                    }
+                },
+                {
+                    front: {
+                        url: 'project3-featured-189023420-800x800',
+                        alt: 'project-3-800x800'
+                    },
+                    back: {
+                        name: 'Florida Health Facility',
+                        type: 'Commercial' 
+                    }
+                }
+            ]
         }
     },
     components: {
-    SectionTitleComponent
+    SectionTitleComponent,
+    CardBackIconsComponent
 }
 }
 
@@ -53,13 +98,61 @@ export default {
             padding-top: 0;
         }
         
-        .image-container{
-            padding: 0 200px;
-            .col-4{
-                img{
-                    max-width: 100%;
-                    max-height: 100%;
+        .card-container{
+            justify-content: center;
+            
+            .card{
+                padding: 0;
+                width: 250px;
+                height: 250px;
+                margin: 0 10px;
+                
+                .inner-card{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+
+                    .card-face{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        backface-visibility: hidden;
+
+                    }
+                    .face-front{
+                        background-color: #f0ede6;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        z-index: 100;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    .face-back{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #f9d03f;
+                        color: #fff;
+
+                        h5{
+                            padding-top: 10px;
+                        }
+                        
+                    }
                 }
+                .inner-card:hover{
+                    .face-front{
+                        z-index: -200;
+                    }
+                }
+
+                
             }
         }
         .link-container{

@@ -24,7 +24,6 @@ export default {
     name: 'ServicesCardComponent',
     data(){
         return {
-            cardActual: "start",
             cards: [
                 {
                     front: {
@@ -96,7 +95,6 @@ export default {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                cursor: pointer;
             }
 
             .card-face{
@@ -127,7 +125,7 @@ export default {
             }
             .inner-card:hover{
                 .face-front{
-                    opacity: 0;
+                    z-index: -200;;
                 }
             }
 
@@ -137,6 +135,8 @@ export default {
                 .yellow-btn{
                     background-color: #ffe07b;
                     color: #6b6868;
+                    cursor: pointer;
+
                 }
             }
 

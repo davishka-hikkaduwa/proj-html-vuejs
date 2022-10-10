@@ -9,10 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faBuilding } from '@fortawesome/free-regular-svg-icons'
-import { faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe, faMagnifyingGlass, faLink } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faBuilding, faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe)
+library.add(faBuilding, faArrowsRotate, faHouseChimney, faTruck, faGear, faUsers, faLightbulb, faBriefcase, faGlobe, faMagnifyingGlass, faLink)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
