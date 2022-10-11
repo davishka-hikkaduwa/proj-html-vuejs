@@ -31,6 +31,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     .about-card-container{
 
         .about-card{
@@ -52,7 +54,7 @@ export default {
 
                 .icons{
                     font-size: 3rem;
-                    color: #fff;
+                    color: $white-color;
                 
                 }
             }
@@ -72,16 +74,16 @@ export default {
                 left: 40%;
                 width: 25px;
                 height: 2px;
-                background-color: #31312f;
+                background-color: $tuatara-color;
             }
         }
 
         .about-card:hover{
             .icon-container{
-                background-color: #f9d03f!important;
+                background-color: $bright-sun-color!important;
             }
             h6{
-                color: #f9d03f;
+                color: $bright-sun-color;
             }
         }
 

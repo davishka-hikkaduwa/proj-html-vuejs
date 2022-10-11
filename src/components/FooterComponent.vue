@@ -30,16 +30,20 @@
                     <div class="heading-container">
                         <h6>FIND US</h6>
                     </div>
-
+                    <div class="map-container">
+                        <img src="@/assets/img/construction_map_pin.png" alt="map">
+                    </div>
                 </div>
             </div>
         </div>
+        <SocialsComponent/>
     </footer>
 </template>
 
 <script>
 import TweetComponent from './TweetComponent.vue';
 import ContactsComponent from './ContactsComponent.vue';
+import SocialsComponent from './SocialsComponent.vue';
     export default {
     name: "FooterComponent",
     data(){
@@ -54,46 +58,50 @@ import ContactsComponent from './ContactsComponent.vue';
             ]
         }
     },
-    components: { TweetComponent, ContactsComponent }
+    components: { TweetComponent, ContactsComponent, SocialsComponent }
 }     
 
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     footer{
         .bar{
             height: 10px;
-            background-color: #6b6868;
+            background-color: $dove-grey-color;
         }
         .container-fluid{
             padding: 50px 0;
-            background-color: #1e1e1e;
+            background-color: $cod-grey-color;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: #fff;
+            color: $white-color;
             // height: 300px;
             .row{
                 padding: 0 50px;
                 height: 100%;
 
                 .col{
-                    // border: 1px solid white;
-                    height: 100%;
-                    // height: 200px;
-                    
+                    height: 100%;    
                     margin: 0 5px;
                     .heading-container{
                         margin-bottom: 20px;
 
                         h6{
-                        color: #f9d03f;
+                        color: $bright-sun-color;
                         font-weight: bold!important;
                     }
                     }
                     
                     .tweet-container{
-                        // margin-top: 20px;
+                    }
+                    .map-container{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
                     }
                     
                 }
@@ -107,16 +115,17 @@ import ContactsComponent from './ContactsComponent.vue';
                     }
                     p{
                         margin: 10px 0;
-                        color:#6b6868;
+                        color:$dove-grey-color;
                     }
                     .gold-btn{
 
                     }
                     .gold-btn:hover{
-                        background-color: #f9d03f!important;
+                        background-color: $bright-sun-color!important;
                     }
                 }
             }
         }
+        
     }
 </style>

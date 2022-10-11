@@ -53,10 +53,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
 #contacts{
     .row{
         padding: 5px 0;
-        color: #6b6868;
+        color: $dove-grey-color;
         font-size: 12px;
     }
 }

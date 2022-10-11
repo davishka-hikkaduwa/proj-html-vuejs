@@ -23,6 +23,7 @@
 </template>
 
 <script>
+
 import AboutCardComponent from "@/components/AboutCardComponent.vue";
 import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
     export default {
@@ -41,8 +42,10 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     #about{
-        background-color: #f0ede6;
+        background-color: $pampas-color;
         padding: 30px 0;
         text-align: center;
 
@@ -58,7 +61,7 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
         .feedback{
             padding-top: 80px;
             padding-bottom: 80px;
-            color: #fff;
+            color: $white-color;
             background-image: url('@/assets/img/home-parallax-144609983.jpg');
             background-repeat:no-repeat;
             background-size: cover;
@@ -67,7 +70,7 @@ import SectionTitleComponent from "@/components/SectionTitleComponent.vue";
 
             .top-curved-space,
             .bottom-curved-space {
-                background-color: #f0ede6;
+                background-color: $pampas-color;
             }
             
             .info-container{

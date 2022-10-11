@@ -1,3 +1,5 @@
+@import '@/assets/styles/pallette.scss';
+
 // ----- BUTTONS -----
 
 button {
@@ -9,14 +11,14 @@ button {
 
 .gold-btn,
 .black-btn:hover {
-    background-color: #f9d03f;
-    color: #6b6868;
+    background-color: $bright-sun-color;
+    color: $dove-grey-color;
 }
 
 .black-btn,
 .gold-btn:hover {
-    background-color: #31312f;
-    color: #fff;
+    background-color: $tuatara-color;
+    color: $white-color;
 }
 
 

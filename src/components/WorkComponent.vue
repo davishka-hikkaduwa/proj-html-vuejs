@@ -10,8 +10,7 @@
             <div class="col-4 card" v-for="(card, index) in cards" :key="index">
                 <div class="inner-card">
                     <div class="card-face face-front">
-                        Ciao
-                        <!-- <img :src="`@/assets/img/${card.front.url}.jpg`" :alt="card.front.alt"/> -->
+                        <img :src="`./assets/img/${card.front.url}.jpg`" :alt="card.front.alt"/>
                     </div>
                     <div class="card-face face-back">
                         <CardBackIconsComponent class="row"/>
@@ -90,6 +89,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     #work{
         padding: 10px 0;
         text-align: center;
@@ -120,7 +121,7 @@ export default {
 
                     }
                     .face-front{
-                        background-color: #f0ede6;
+                        background-color: $pampas-color;
                         display: flex;
                         justify-content: center;
                         flex-direction: column;
@@ -137,8 +138,8 @@ export default {
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        background-color: #f9d03f;
-                        color: #fff;
+                        background-color: $bright-sun-color;
+                        color: $white-color;
 
                         h5{
                             padding-top: 10px;
@@ -164,10 +165,10 @@ export default {
                 }
             }
             .col-4:first-child{
-                border-top: 1px solid #f0ede6;
+                border-top: 1px solid $pampas-color;
             }
             .col-4:last-child{
-                border-bottom: 1px solid #f0ede6;
+                border-bottom: 1px solid $pampas-color;
             }
             
         }

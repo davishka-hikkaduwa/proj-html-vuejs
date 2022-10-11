@@ -63,8 +63,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     #articles{
-        background-color: #f0ede6;
+        background-color: $pampas-color;
         padding: 10px 0;
         text-align: center;
         .info-container{
@@ -72,13 +74,13 @@ export default {
         }
         .articles-card-container{
             justify-content: center;
-            margin: 0px 150px;
+            margin: 0px 280px;
             margin-bottom: 50px;
 
             .article-card{
                 margin: 0 10px;
                 padding: 0;
-                background-color: #fff;
+                background-color: $white-color;
                 height: 100%;
                 .image-container{
                     width: 100%;
@@ -92,7 +94,7 @@ export default {
                     text-align: left;
                     
                     .line{
-                        border-top: 1px solid #6b6868;
+                        border-top: 1px solid $dove-grey-color;
                         padding-bottom: 1rem;
                     }
                 }
@@ -108,10 +110,10 @@ export default {
 
             }
             .col:first-child{
-                border-top: 1px solid #fff;
+                border-top: 1px solid $white-color;
             }
             .col:last-child{
-                border-bottom: 1px solid #fff;
+                border-bottom: 1px solid $white-color;
             }
         }
     }

@@ -14,6 +14,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     // ----- TEXT-UNDERLINE -----
     .custom-underline {
         padding-bottom: 20px;
@@ -27,7 +29,7 @@ export default {
         left: 40%;
         width: 140px;
         height: 2px;
-        background-color: #f9d03f;
+        background-color: $bright-sun-color;
     }
     // ----- /TEXT-UNDERLINE -----
 </style>

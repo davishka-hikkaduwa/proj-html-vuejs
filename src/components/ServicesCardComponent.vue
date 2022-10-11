@@ -79,6 +79,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     .services-card-container{
         flex-wrap: nowrap;
 
@@ -116,7 +118,7 @@ export default {
             }
 
             .face-front{
-                background-color: #f0ede6;
+                background-color: $pampas-color;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -130,11 +132,11 @@ export default {
             }
 
             .face-back{
-                background-color: #f9d03f;
-                color: #6b6868;
+                background-color: $bright-sun-color;
+                color: $dove-grey-color;
                 .yellow-btn{
                     background-color: #ffe07b;
-                    color: #6b6868;
+                    color: $dove-grey-color;
                     cursor: pointer;
 
                 }

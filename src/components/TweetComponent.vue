@@ -52,6 +52,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     .tweet{
         p{
             padding: 0!important;
@@ -66,11 +68,7 @@ export default {
                     // width: 100%;
                 }
             }
-            .col-2,.col-10, .col{
-                // border: 1px solid red;
-                
-                
-            }
+            
             .content-container{
                 .row{
                     flex-wrap: nowrap!important;
@@ -81,7 +79,7 @@ export default {
                             font-size: 12px;
                         }
                         p:last-child{
-                            color: #bcbcbc;
+                            color: $silver-color;
                         }
                     }
                     .twitter-logo-container{
@@ -109,7 +107,7 @@ export default {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        color: #6b6868;
+                        color: $dove-grey-color;
                     }
                     .time{
                         padding: 10px 0;
@@ -117,7 +115,7 @@ export default {
                         flex-direction: row;
                         justify-content: flex-end;
                         font-size: 12px;
-                        color: #6b6868
+                        color: $dove-grey-color
 
                     }
                 }

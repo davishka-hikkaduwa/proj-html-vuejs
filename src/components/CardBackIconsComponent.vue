@@ -16,6 +16,7 @@
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
 
     .icon-container{
         border-radius: 50%;
@@ -26,11 +27,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
+        background-color: $white-color;
         cursor: pointer;
 
         .icons{
-            color: #f9d03f;
+            color: $bright-sun-color;
         }
     }
 </style>

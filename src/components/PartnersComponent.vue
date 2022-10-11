@@ -56,12 +56,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     #trusted-partners{
         text-align: center;
         .card-container{
             margin: 10px 150px;
             .card{
-                // border: 1px solid black;
                 margin: 0 10px;
             }
         }
@@ -72,7 +73,7 @@ export default {
             background-repeat:no-repeat;
             background-size: cover;
             background-position-y: 80%;   
-            color: #fff;
+            color: $white-color;
             height: 300px;
             .container{
                 display: flex;

@@ -64,26 +64,28 @@ import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     #services{
         text-align: center;
 
         .label-container{
             padding: 50px 30px;
-            background-color: #f9d03f;
-            color: #1e1e1e;
+            background-color: $bright-sun-color;
+            color: $cod-grey-color;
         }
  
         .sandwich-btn{
             display: block;
             position: absolute;
-            border: 2px solid #fff;
+            border: 2px solid $white-color;
             left: 50%;
             transform: translateY(-50%) translateX(-50%);
         }
         .sandwich-btn:hover{
-            background-color: #fff;
-            color: #1e1e1e;
-            border: 2px solid #1e1e1e;
+            background-color: $white-color;
+            color: $cod-grey-color;
+            border: 2px solid $cod-grey-color;
         }
         .card-container{
             padding: 20px 60px;
@@ -105,7 +107,7 @@ import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
 
             .top-curved-space,
             .bottom-curved-space {
-                background-color: #fff;
+                background-color: $white-color;
             }
 
             .card-container{
@@ -124,16 +126,16 @@ import SectionTitleComponent from '@/components/SectionTitleComponent.vue';
                     background-color: transparent;
                     white-space: nowrap;
                     .icons{
-                        color: #f9d03f;
+                        color: $bright-sun-color;
                         font-size: 60px;
                         margin: 10px 0;
                     }
                     h5{
-                        color: #f9d03f;
+                        color: $bright-sun-color;
                         font-size: 50px;
                     }
                     p{
-                        color: #fff;
+                        color: $white-color;
                         font-size: 12px;
                         font-weight: bold;
                     }

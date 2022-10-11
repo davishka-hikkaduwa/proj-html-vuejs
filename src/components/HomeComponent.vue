@@ -20,6 +20,8 @@
 </script>
 
 <style scoped lang="scss">
+  @import '@/assets/styles/pallette.scss';
+
     #home{
         background-image: url("../assets/img/home-slider-62528242.jpg");
         background-repeat:no-repeat;
@@ -30,10 +32,10 @@
         justify-content: center;
         flex-direction: column;
         h1{
-            color: #fff;
+            color: $white-color;
         }
         h6{
-            color: #f9d03f;
+            color: $bright-sun-color;
             margin-bottom: 26px;
         }
     }

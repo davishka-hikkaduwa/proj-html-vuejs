@@ -35,11 +35,11 @@
 </script>
 
 <style scoped lang="scss">
-    
+@import '@/assets/styles/pallette.scss';
+
     header{
         margin: 0;
         height: 100px;
-        border-bottom: 1px solid black;
         .row{
             height: 100%;
         }
@@ -58,10 +58,10 @@
             list-style-type: none;
             justify-content: space-between;
             li{
-                color: #6b6868;
+                color: $dove-grey-color;
             }
             li:hover{
-                color: #fed23f;
+                color: $bright-sun-color;
             }     
         }
         .button-container{
