@@ -1,10 +1,10 @@
 <template>
     <div class="socials">
             <div class="row">
-                <div class="col-8">
+                <div class="col-10 text-container">                  
                    <p>COPYRIGHTS 2012 - 2015 AVADA THEME BY AVADA FUSION | ALLRIGHTS RESERVED | POWERED BY WORDPRESS</p>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <div class="row">
                         <div class="col icon-container" v-for="(logo, index) in logos" :key="index">
                             <font-awesome-icon :icon="logo.icon" class="icons"/>
@@ -48,21 +48,36 @@ export default {
     color: $white-color;
     .row{
         height: 100%;
-        .col-8, .col-4{
-            border: 1px solid $white-color;
+        .col-10, .col-2{
             height: 80%;
         }
-        .col-4{
+        .col-2{
             .row{
                 display: flex;
-                justify-content: flex-end;
+                margin: 0!important;
                 .icon-container{
                     display: flex;
                     flex-direction: column;
-                    
-                    max-width: fit-content;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;            
+                    .icons{
+                        max-height: 100%;
+                        max-width: 100%;
+                        font-size: 14px;
+                        color: $dove-grey-color;
+                    }
                 }
-
+            }
+        }
+        .text-container{
+            display: flex;
+            align-items: center;
+            p{
+                margin: 0!important;
+                font-size: 10px;
+                color: $dove-grey-color;
             }
         }
     }

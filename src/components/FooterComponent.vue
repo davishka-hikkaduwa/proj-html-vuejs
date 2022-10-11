@@ -58,7 +58,11 @@ import SocialsComponent from './SocialsComponent.vue';
             ]
         }
     },
-    components: { TweetComponent, ContactsComponent, SocialsComponent }
+    components: { 
+        TweetComponent, 
+        ContactsComponent, 
+        SocialsComponent 
+    }
 }     
 
 </script>
