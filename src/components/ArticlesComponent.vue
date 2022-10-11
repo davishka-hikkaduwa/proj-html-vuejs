@@ -74,10 +74,11 @@ export default {
         }
         .articles-card-container{
             justify-content: center;
-            margin: 0px 280px;
+            margin: 0px 240px;
             margin-bottom: 50px;
 
             .article-card{
+                width: calc((100% / 3) - 480px);
                 margin: 0 10px;
                 padding: 0;
                 background-color: $white-color;

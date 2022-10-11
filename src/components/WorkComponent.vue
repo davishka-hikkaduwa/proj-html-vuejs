@@ -21,11 +21,6 @@
                     </div>
                 </div>
             </div>
-            <!--
-                <img src="@/assets/img/project2-featured-15013609-800x800.jpg" alt="project-2-800x800">
-                <img src="@/assets/img/project1-featured-294276386-800x800.jpg" alt="project-1-800x800">
-                <img src="@/assets/img/project3-featured-189023420-800x800.jpg" alt="project-3-800x800">
-            -->
         </div>
         <div class="row link-container">
             <div class="col-4"></div>
