@@ -99,8 +99,7 @@ import SocialsComponent from './SocialsComponent.vue';
                     }
                     }
                     
-                    .tweet-container{
-                    }
+                    
                     .map-container{
                         width: 100%;
                         img{
@@ -121,9 +120,7 @@ import SocialsComponent from './SocialsComponent.vue';
                         margin: 10px 0;
                         color:$dove-grey-color;
                     }
-                    .gold-btn{
-
-                    }
+                    
                     .gold-btn:hover{
                         background-color: $bright-sun-color!important;
                     }
